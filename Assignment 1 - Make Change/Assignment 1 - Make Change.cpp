@@ -38,7 +38,8 @@ int main()
 
 		while (amountPaid < cost) {
 			amountDue = cost - amountPaid; 
-			cout << "\nInsufficient funds. You need $"<< setprecision(2) << fixed << amountDue << " more. \nEnter additional amount paid: ";
+			cout << "\nInsufficient funds. You need $"<< setprecision(2) 
+				<< fixed << amountDue << " more. \nEnter additional amount paid: ";
 			cin >> additionalAmount;
 			amountPaid += additionalAmount;
 		};
