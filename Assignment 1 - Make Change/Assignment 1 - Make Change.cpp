@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ int main()
 	double cost;
 	double amountPaid;
 	double additionalAmount;
+	double amountDue;
 	int totalChange;
 	int dollarsDue=0;
 	int	quartersDue=0;
@@ -35,7 +37,8 @@ int main()
 		cin >> amountPaid;
 
 		while (amountPaid < cost) {
-			cout << "Enter additional amount paid: ";
+			amountDue = cost - amountPaid; 
+			cout << "\nInsufficient funds. You need $"<< setprecision(2) << fixed << amountDue << " more. \nEnter additional amount paid: ";
 			cin >> additionalAmount;
 			amountPaid += additionalAmount;
 		};
